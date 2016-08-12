@@ -1,5 +1,5 @@
 sudo: required
 dist: trusty
 
-install:
+script:
   - sudo ./install.sh
