@@ -2,4 +2,4 @@ sudo: required
 dist: trusty
 
 script:
-  - ./install.sh
+  - sudo ./install.sh
