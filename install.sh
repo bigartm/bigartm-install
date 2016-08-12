@@ -26,9 +26,8 @@ rm -rf bigartm
 export ARTM_SHARED_LIBRARY=/usr/local/lib/libartm.so
 
 # Validate BigARTM CLI
-which bigartm
-bigartm
+which bigartm && bigartm --help
 
 # Validate artm python module
-echo "import artm; print artm.version()" > test.py
+echo "import artm; print(artm.version()); print(artm.ARTM(num_topics=10).info)" > test.py
 python test.py

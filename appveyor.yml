@@ -1,0 +1,29 @@
+# Specify version format
+version: "{build}"
+
+# specify custom environment variables
+environment:
+  PYTHON_VERSION: 3.5
+  MINICONDA: C:\Miniconda35-x64
+
+# clone directory
+clone_folder: C:\projects\bigartm-install
+
+install:
+  - "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a
+  - conda install numpy pandas pytest
+  - ps: C:\projects\bigartm-install\install.ps1
+
+build: off
+
+test_script:
+  - "set PATH=C:\\BigARTM\\bin;%PATH%"
+  - bigartm.exe
+  - python C:\projects\bigartm-install\canary_test.py
+
+# Enable RDP connection to test server as described here: http://www.appveyor.com/docs/how-to/rdp-to-build-worker
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
