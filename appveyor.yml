@@ -15,6 +15,7 @@ install:
   - conda update -q conda
   - conda info -a
   - conda install numpy pandas pytest
+  - conda install -c conda-forge tqdm
   - ps: C:\projects\bigartm-install\install.ps1
 
 build: off

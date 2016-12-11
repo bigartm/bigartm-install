@@ -11,9 +11,10 @@ apt-get --yes install python-pandas
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 pip install protobuf
+pip install tqdm
 
 # Clone repository and build
-git clone --branch=stable https://github.com/bigartm/bigartm.git
+git clone --branch=v0.8.2 https://github.com/bigartm/bigartm.git
 cd bigartm
 mkdir build && cd build
 cmake ..
