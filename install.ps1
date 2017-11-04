@@ -1,6 +1,6 @@
 mkdir C:\BigARTM
 cd C:\BigARTM
-wget "https://ci.appveyor.com/api/projects/bigartm/bigartm/artifacts/BigARTM.7z?branch=stable&job=Environment%3A%20PYTHON_VERSION%3D3.5%2C%20MINICONDA%3DC%3A%5CMiniconda35-x64" -OutFile "$pwd\BigARTM.7z"
+wget "https://ci.appveyor.com/api/projects/bigartm/bigartm/artifacts/BigARTM.7z?branch=stable&job=Environment%3A%20PYTHON_VERSION%3D3.6%2C%20MINICONDA%3DC%3A%5CMiniconda36-x64" -OutFile "$pwd\BigARTM.7z"
 7z.exe x .\BigARTM.7z
 
 cd protobuf\python

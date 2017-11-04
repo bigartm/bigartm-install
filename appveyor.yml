@@ -3,8 +3,8 @@ version: "{build}"
 
 # specify custom environment variables
 environment:
-  PYTHON_VERSION: 3.5
-  MINICONDA: C:\Miniconda35-x64
+  PYTHON_VERSION: 3.6
+  MINICONDA: C:\Miniconda36-x64
 
 # clone directory
 clone_folder: C:\projects\bigartm-install
@@ -14,7 +14,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
-  - conda install numpy pandas pytest
+  - conda install -c conda-forge numpy scipy pandas pytest
   - conda install -c conda-forge tqdm
   - ps: C:\projects\bigartm-install\install.ps1
 

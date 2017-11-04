@@ -7,14 +7,16 @@ apt-get --yes install build-essential
 apt-get --yes install libboost-all-dev
 apt-get --yes install python-numpy
 apt-get --yes install python-pandas
+apt-get --yes install python-scipy
 
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
+pip install wheel
 pip install protobuf
 pip install tqdm
 
 # Clone repository and build
-git clone --branch=v0.8.3 https://github.com/bigartm/bigartm.git
+git clone --branch=v0.9.0 https://github.com/bigartm/bigartm.git
 cd bigartm
 mkdir build && cd build
 cmake ..
