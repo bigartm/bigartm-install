@@ -16,7 +16,7 @@ pip install protobuf
 pip install tqdm
 
 # Clone repository and build
-git clone --branch=v0.9.0 https://github.com/bigartm/bigartm.git
+git clone --branch=master https://github.com/bigartm/bigartm.git
 cd bigartm
 mkdir build && cd build
 cmake ..
